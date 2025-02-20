@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NaveBar from'./components/navebar'
+import NewsBoard from'./components/newsBoard'
+import NotFound from './components/notFound'
 
 function App() {
+
+  const [category, setCategory] = useState("general");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <NaveBar setCategory={setCategory} />
+      <BrowserRouter> 
+        <Routes>
+          <Route path='/' element={<NewsBoard category={category} />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+
+    </>
   );
 }
 
