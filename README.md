@@ -42,15 +42,17 @@ A modern and responsive news application built with React.js, CSS, and [NewsAPI]
 
 5. Open http://localhost:3000 in your browser.
 
-🎨 Customization
+## 🎨 Customization
 
 - Modify API configurations in ```src/config.js```.
 - Update styles in ```src/styles/```.
 - Enhance UI components in ```src/components/```.
 
-📜 License
+## 📜 License
 
 This project is open-source and available under the MIT License.
+
+
 
 Made with ❤️ by **Ahmed Ramadan Elroby**
 
